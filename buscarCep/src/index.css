@@ -1,0 +1,33 @@
+body {
+  background-color: #0d0d0d;
+}
+
+h1 {
+  font-size: 35px;
+  color: white;
+  margin-bottom: 20px;
+  font-family: 'Abel', sans-serif;
+  animation-name: cep;
+  animation-duration: 3s;
+}
+
+h2 {
+  color: white;
+}
+
+@keyframes cep {
+  0% {
+    color: #000000;
+    margin-bottom: 20px;
+  }
+
+  30% {
+    letter-spacing: 30px;
+    margin-bottom: 20px;
+  }
+
+  85% {
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+  }
+}

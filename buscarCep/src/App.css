@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+
+}
+
+.container-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  margin-right: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  height: 38px;
+}
+
+.info-container {
+  margin-top: 20px;
+  flex-direction: column;
+  background-color: #171717;
+  border-radius: 15px;
+  width: 50vw;
+  height: auto;
+  justify-content: center;
+}
+
+p {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  font-size: 25px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+footer {
+  color: white;
+  margin-top: 400px;
+  font-family: 'Abel', sans-serif;
+  font-size: 20px;
+}
