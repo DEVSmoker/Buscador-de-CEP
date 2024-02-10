@@ -107,7 +107,7 @@ function App() {
           </div>
         )}
       </div>
-      <footer>Desenvolvido por <span style={{ display: 'inline', fontWeight: 'bold' }}>Pedro &#169;</span> </footer>
+      <footer>Desenvolvido por <span style={{ display: 'inline', fontWeight: 'bold' }}>Pedro &#169;</span> versão 0.1 </footer>
     </div >
   )
 }
