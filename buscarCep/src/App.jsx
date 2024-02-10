@@ -60,7 +60,7 @@ function App() {
 
   // função para lidar com a ação de pesquisa
   const handleSearch = () => { // função que pesquisa o cep ao clicar.
-    if (input.current.value.length !== 8) {
+    if (input.current.value.length !== 8 && input.current.value.length > 8) {
       Swal.fire({
 
         icon: "warning",
