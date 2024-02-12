@@ -9,16 +9,6 @@ function App() {
   const input = useRef(null);
   const [data, setData] = useState(null);
 
-  const [cep, setCep] = useState('');
-
-  const [logradouro, setLogradouro] = useState('');
-
-  const [uf, setUf] = useState('');
-
-  const [bairro, setBairro] = useState('');
-
-  const [localidade, setLocalidade] = useState('');
-
   const [loading, setLoading] = useState(false)
 
   const url = 'https://viacep.com.br/ws/'; //armazena a api em uma variavel chamada url
