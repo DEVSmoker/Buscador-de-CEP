@@ -50,12 +50,13 @@ function App() {
       // Em caso de erro, limpa os dados existentes
       setData(null);
       setLoading(false);
+      console.log(error)
     }
   };
 
   // função para lidar com a ação de pesquisa
   const handleSearch = () => { // função que pesquisa o cep ao clicar.
-    if (input.current.value.length !== 8 && input.current.value.length > 8) {
+    if (input.current.value.length < 8 || input.current.value.length > 8) {
       Swal.fire({
 
         icon: "warning",
@@ -102,7 +103,7 @@ function App() {
           </div>
         )}
       </div>
-      <footer>Desenvolvido por <span style={{ display: 'inline', fontWeight: 'bold' }}>Pedro &#169;</span> <br /> versão 0.1 </footer>
+      <footer>Desenvolvido por <span style={{ display: 'inline', fontWeight: 'bold' }}>Pedro &#169;</span> <br /> versão 0.2 </footer>
     </div >
   )
 }
