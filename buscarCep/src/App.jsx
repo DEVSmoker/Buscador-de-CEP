@@ -43,14 +43,13 @@ function App() {
           uf: data.uf,
           localidade: data.localidade,
           bairro: data.bairro
-        });
+        })
         setLoading(false);
       }, 1000);
     } catch (error) {
       // Em caso de erro, limpa os dados existentes
       setData(null);
       setLoading(false);
-      console.log(`Erro na requisição ${error}`)
     }
   };
 
@@ -92,11 +91,11 @@ function App() {
           <div className='info-container'>
             {data && (
               <div>
-                <h2>CEP: <span style={{ marginLeft: '5px' }}>{cep}</span> </h2>
-                <p>Rua: <span style={{ fontWeight: 'bold', fontSize: '21px', marginLeft: '5px' }}>{logradouro}</span> </p>
-                <p>Bairro: <span style={{ fontWeight: 'bold', fontSize: '21px', marginLeft: '5px' }}>{bairro}</span></p>
-                <p>Cidade: <span style={{ fontWeight: 'bold', fontSize: '21px', marginLeft: '5px' }}>{localidade}</span> </p>
-                <p>Estado:  <span style={{ fontWeight: 'bold', fontSize: '21px', marginLeft: '5px' }}>{uf}</span></p>
+                <h2>CEP: <span style={{ marginLeft: '5px' }}>{data.cep}</span> </h2>
+                <p>Rua: <span style={{ fontWeight: 'bold', fontSize: '21px', marginLeft: '5px' }}>{data.logradouro}</span> </p>
+                <p>Bairro: <span style={{ fontWeight: 'bold', fontSize: '21px', marginLeft: '5px' }}>{data.bairro}</span></p>
+                <p>Cidade: <span style={{ fontWeight: 'bold', fontSize: '21px', marginLeft: '5px' }}>{data.localidade}</span> </p>
+                <p>Estado:  <span style={{ fontWeight: 'bold', fontSize: '21px', marginLeft: '5px' }}>{data.uf}</span></p>
 
               </div>
             )}
