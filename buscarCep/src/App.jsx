@@ -37,24 +37,20 @@ function App() {
       const response = await fetch(url + input.current.value + '/json');
       const data = await response.json();
       setTimeout(() => {
-        if (data.erro) {
-          // Se o CEP não for encontrado, limpa os dados existentes
-          setData(null);
-        } else {
-          // Caso contrário, atualiza os dados do CEP
-          setData(data);
-          setCep(data.cep);
-          setLogradouro(data.logradouro);
-          setUf(data.uf);
-          setLocalidade(data.localidade);
-          setBairro(data.bairro);
-        }
+        setData({
+          cep: data.cep,
+          logradouro: data.logradouro,
+          uf: data.uf,
+          localidade: data.localidade,
+          bairro: data.bairro
+        });
         setLoading(false);
       }, 1000);
     } catch (error) {
       // Em caso de erro, limpa os dados existentes
       setData(null);
       setLoading(false);
+      console.log(`Erro na requisição ${error}`)
     }
   };
 
@@ -107,7 +103,7 @@ function App() {
           </div>
         )}
       </div>
-      <footer>Desenvolvido por <span style={{ display: 'inline', fontWeight: 'bold' }}>Pedro &#169;</span> versão 0.1 </footer>
+      <footer>Desenvolvido por <span style={{ display: 'inline', fontWeight: 'bold' }}>Pedro &#169;</span> <br /> versão 0.1 </footer>
     </div >
   )
 }
